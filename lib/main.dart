@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:togo_list/providers/togos.dart';
 
 import './screens/togo_list_screen.dart';
+import './screens/add_togo_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
           // accentColor: Colors.amber,
         ),
         home: ToGoListScreen(),
+        routes: {
+          AddToGoScreen.routeName: (context) => AddToGoScreen(),
+        },
       ),
     );
   }
