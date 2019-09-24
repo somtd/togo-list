@@ -47,7 +47,11 @@ class _AddToGoScreenState extends State<AddToGoScreen> {
                     TextField(
                       decoration: InputDecoration(labelText: 'Location'),
                       controller: _locationController,
-                    )
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    LocationInput(),
                   ],
                 ),
               ),
