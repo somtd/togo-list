@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/image_input.dart';
+import '../widgets/location_input.dart';
+
 class AddToGoScreen extends StatefulWidget {
   static const routeName = '/add-togo';
 
@@ -8,6 +11,9 @@ class AddToGoScreen extends StatefulWidget {
 }
 
 class _AddToGoScreenState extends State<AddToGoScreen> {
+  final _titleController = TextEditingController();
+  final _locationController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
@@ -32,9 +38,16 @@ class _AddToGoScreenState extends State<AddToGoScreen> {
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
-                    TextField(),
-                    TextField(),
-                    TextField(),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                      controller: _titleController,
+                    ),
+                    SizedBox(height: 10),
+                    ImageInput(),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Location'),
+                      controller: _locationController,
+                    )
                   ],
                 ),
               ),
