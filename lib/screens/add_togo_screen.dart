@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../widgets/image_input.dart';
 import '../widgets/location_input.dart';
@@ -16,6 +17,7 @@ class _AddToGoScreenState extends State<AddToGoScreen> {
 
   @override
   void initState() {
+    print('This GOOGLE MAP API Key:' + DotEnv().env['GOOGLE_MAP_API_KEY']);
     super.initState();
   }
 

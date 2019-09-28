@@ -17,6 +17,7 @@ class _LocationInputState extends State<LocationInput> {
       latitude: locationData.latitude,
       longitude: locationData.longitude,
     );
+    print(staticMapImageUrl);
     setState(() {
       _previewImageUrl = staticMapImageUrl;
     });
