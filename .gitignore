@@ -38,7 +38,7 @@
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
-**t/android/app/src/main/res/values/api-key.xml
+**/android/app/src/main/res/values/api-key.xml
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
