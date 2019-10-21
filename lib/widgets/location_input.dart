@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
+import 'package:togo_list/screens/map_screen.dart';
 
 import '../helper/location_helper.dart';
 
@@ -23,6 +24,19 @@ class _LocationInputState extends State<LocationInput> {
     });
     // print(locationData.latitude);
     // print(locationData.longitude);
+  }
+
+  Future<void> _selectOnMap() async {
+    final selectedLocation = await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => MapScreen(
+          isSelecting: true,
+        ),
+      ),
+    );
+    if (selectedLocation == null) {
+      return;
+    }
   }
 
   @override
@@ -60,7 +74,7 @@ class _LocationInputState extends State<LocationInput> {
               icon: Icon(Icons.map),
               label: Text('Choose from Map'),
               textColor: Theme.of(context).primaryColor,
-              onPressed: () {},
+              onPressed: _selectOnMap,
             ),
           ],
         ),

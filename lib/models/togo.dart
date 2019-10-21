@@ -5,10 +5,10 @@ class ToGoLocation {
   final double longitude;
   final String address;
 
-  ToGoLocation({
+  const ToGoLocation({
     @required this.latitude,
     @required this.longitude,
-    @required this.address,
+    this.address,
   });
 }
 
